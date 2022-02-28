@@ -11,7 +11,7 @@
 ## Demo
 
 ### Website screenshot:
-[![](/images/webpage_screencapture1.PNG)]
+![](/images/webpage_screencapture1.png)
 
 ## Overview
 This data science project walks through step by step process of how to build a real estate price prediction model and use it via a website.

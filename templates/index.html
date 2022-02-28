@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Price Prediction</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../static/main.js"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Area (Square Feet)</h2>
+    <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+	<h2>No. of Bedrooms</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bedroom-1" name="uiBedrooms" value="1"/>
+		<label for="radio-bedroom-1">1</label>
+		<input type="radio" id="radio-bedroom-2" name="uiBedrooms" value="2" checked/>
+		<label for="radio-bedroom-2">2</label>
+		<input type="radio" id="radio-bedroom-3" name="uiBedrooms" value="3"/>
+		<label for="radio-bedroom-3">3</label>
+		<input type="radio" id="radio-bedroom-4" name="uiBedrooms" value="4"/>
+		<label for="radio-bedroom-4">4</label>
+		<input type="radio" id="radio-bedroom-5" name="uiBedrooms" value="5"/>
+		<label for="radio-bedroom-5">5</label>
+	</div>
+	</form>
+<form class="form">
+	<h2>No. of Bath</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+		<label for="radio-bath-1">1</label>
+		<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+		<label for="radio-bath-2">2</label>
+		<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+		<label for="radio-bath-3">3</label>
+		<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+		<label for="radio-bath-4">4</label>
+		<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+		<label for="radio-bath-5">5</label>
+	</div>
+</form>
+    <form class="form">
+        <h2>No. of Balconies</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-balcony-1" name="uiBalconies" value="1"/>
+            <label for="radio-balcony-1">1</label>
+            <input type="radio" id="radio-balcony-2" name="uiBalconies" value="2" checked/>
+            <label for="radio-balcony-2">2</label>
+            <input type="radio" id="radio-balcony-3" name="uiBalconies" value="3"/>
+            <label for="radio-balcony-3">3</label>
+            <input type="radio" id="radio-balcony-4" name="uiBalconies" value="4"/>
+            <label for="radio-balcony-4">4</label>
+            <input type="radio" id="radio-balcony-5" name="uiBalconies" value="5"/>
+            <label for="radio-balcony-5">5</label>
+        </div>
+	</form>
+    <h2 class="title">Location</h2>
+<div>
+	<select class="droplist" name="" id="uiLocations">
+		<option value="" disabled="disabled" selected="selected">Choose a Location</option>
+	</select>
+</div>
+		<h2 class="title">Area type</h2>
+		<div>
+			<select class="droplist" name="" id="uiAreas">
+				<option value="" disabled="disabled" selected="selected">Choose a Location</option>
+			</select>
+		</div>
+
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<div class="result"><h1>The Estimated Prece is:</h1> <h1 id="uiEstimatedPrice">Please choose your options</h1></div>
+
+</body>
+</html>
